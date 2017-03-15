@@ -1,3 +1,8 @@
+yum update
+curl -sSL https://get.docker.com/ | sh
+service docker start
+chkconfig docker on
+
 systemctl start firewalld
 systemctl enable firewalld
 firewall-cmd --add-port=2376/tcp --permanent
