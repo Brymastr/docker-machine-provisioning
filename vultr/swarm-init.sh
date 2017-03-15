@@ -10,7 +10,6 @@ source set-key-variable.sh
 # Create the swarm manager
 docker-machine create \
   -d vultr \
-  --swarm-master \
   --vultr-api-key=$VULTR_TOKEN \
   --vultr-region-id 4 \
   --vultr-plan-id 201 \
