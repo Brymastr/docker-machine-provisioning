@@ -19,7 +19,7 @@ docker-machine create \
   manager1
 
 # Create the swarm workers
-for i in {1..$workers} ; do
+for i in (( i=1; i <= $workers; i++ )) ; do
   docker-machine create \
     -d vultr \
     --vultr-api-key=$VULTR_TOKEN \
