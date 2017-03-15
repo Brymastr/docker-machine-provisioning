@@ -16,7 +16,7 @@ docker-machine create \
   --vultr-os-id 167 \
   --vultr-boot-script "47814" \
   --vultr-ssh-user "root" \
-  --vultr-ssh-key-id "58bdd9862d752" \
+  --vultr-ssh-key-id "58c9cd2da0d8a" \
   manager1
 
 # Create the swarm workers
@@ -29,6 +29,6 @@ for i in {1..workers} ; do
     --vultr-os-id 167 \
     --vultr-boot-script "47814" \
     --vultr-ssh-user "root" \
-    --vultr-ssh-key-id "58bdd9862d752" \
+    --vultr-ssh-key-id "58c9cd2da0d8a" \
     worker$i
 done
