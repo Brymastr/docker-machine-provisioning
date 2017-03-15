@@ -2,7 +2,6 @@
 
 # 1 manager and 2 workers by default unless otherwise specified with parameter 1
 workers=2
-[ ! -z "$1" ] workers=$1
 
 # Create an environment variable out of the vultr api key
 source set-key-variable.sh
