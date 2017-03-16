@@ -1,6 +1,9 @@
 #!/bin/sh
 yum update -y \
   && yum install -y net-tools \
+  && yum install -y git \
+  && git clone https://github.com/dpw/selinux-dockersock && make selinux-dockersock/dockersock.pp && semodule -i dockersock.pp \
+  && git clone https://github.com/Brymastr/foobot-compose.git . \
   && curl -sSL https://get.docker.com/ | sh \
   && service docker start \
   && chkconfig docker on \
